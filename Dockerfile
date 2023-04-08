@@ -8,7 +8,6 @@ RUN apt install git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /boxfuse-sample-java-war-hello
 RUN mvn package
-FROM tomcat:9.0.41-jdk11-openjdk-slim-buster
 COPY --from=builder /build/boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/hello.war
 CMD ["catalina.sh", "run"]
 
