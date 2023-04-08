@@ -6,7 +6,7 @@ RUN apt install default-jdk -y
 RUN apt install tomcat9 -y
 RUN apt install git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-RUN cd boxfuse-sample-java-war-hello/
+RUN cd boxfuse-sample-java-war-hello/boxfuse-sample-java-war-hello
 RUN ls
 
 
