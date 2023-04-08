@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt update
-RUN install apt-utils -y
+RUN apt-get install apt-utils
 RUN apt install maven -y
 RUN apt install default-jdk -y
 RUN apt install tomcat9 -y
