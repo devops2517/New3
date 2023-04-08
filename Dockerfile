@@ -9,7 +9,7 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /boxfuse-sample-java-war-hello
 RUN mvn package
 FROM tomcat:9.0.41-jdk11-openjdk-slim-buster
-COPY /build/boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
+COPY /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
